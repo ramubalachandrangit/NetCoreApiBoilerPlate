@@ -17,14 +17,13 @@ namespace API.Controllers
     {
         public NaturalLanguageController(IService service, ILogger<NaturalLanguageController> logger) : base(service, logger)
         {
-
           
         }
 
         [HttpPost("Analyse")]
         [AllowAnonymous]
         public async Task<ActionResult> Analyse([FromBody] string sentence, CancellationToken ct = new CancellationToken())
-        {
+        {            
             return Ok();
         }
     }

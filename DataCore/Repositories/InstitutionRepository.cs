@@ -5,8 +5,7 @@ using System.Text;
 
 namespace DataCore.Repositories
 {
-    public class WordStoreRepository: IWordStoreRepository
+    public class InstitutionRepository: IInstitutionRepository
     {
-
     }
 }

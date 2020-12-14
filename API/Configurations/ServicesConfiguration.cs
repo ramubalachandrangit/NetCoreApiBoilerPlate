@@ -14,7 +14,9 @@ namespace API.Configurations
     {
         public static IServiceCollection ConfigureRepositories(this IServiceCollection services)
         {
-            services.AddScoped<IWordStoreRepository, WordStoreRepository>();                
+            services.AddScoped<IWordStoreRepository, WordStoreRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<IInstitutionRepository, InstitutionRepository>();
             return services;
         }
 
