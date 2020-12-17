@@ -17,6 +17,7 @@ namespace API.Configurations
             services.AddScoped<IWordStoreRepository, WordStoreRepository>();
             services.AddScoped<IStudentRepository, StudentRepository>();
             services.AddScoped<IInstitutionRepository, InstitutionRepository>();
+            services.AddScoped<IIdentityRepository, IdentityRepository>();
             return services;
         }
 

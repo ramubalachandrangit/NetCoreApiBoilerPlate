@@ -13,15 +13,17 @@ namespace Domain.Service
         private readonly IInstitutionRepository _institutionRepository;
         private readonly IStudentRepository _studentRepository;
         private readonly IWordStoreRepository _wordStoreRepository;
+        private readonly IIdentityRepository _identityRepository;
         private readonly ILogger _logger;
         public Service()
         {
 
         }
 
-        public Service(ILogger<Service> logger, IWordStoreRepository wordStoreRepository, IStudentRepository studentRepository, IInstitutionRepository institutionRepository)
+        public Service(ILogger<Service> logger, IIdentityRepository identityRepository, IWordStoreRepository wordStoreRepository, IStudentRepository studentRepository, IInstitutionRepository institutionRepository)
         {
             _logger = logger;
+            _identityRepository = identityRepository;
             _wordStoreRepository = wordStoreRepository;
             _studentRepository = studentRepository;
             _institutionRepository = institutionRepository;

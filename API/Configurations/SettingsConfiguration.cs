@@ -16,15 +16,5 @@ namespace API.Configurations
             services.AddSingleton(appSettings);
             return services;
         }
-    }
-
-    public class AppSettings
-    {
-        public StartUpSettings StartUpSettings { get; set; }
-    }
-
-    public class StartUpSettings
-    {
-        public string SwaggerUrl { get; set; }
-    }
+    }   
 }

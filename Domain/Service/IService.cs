@@ -1,4 +1,5 @@
-﻿using Domain.Repositories;
+﻿using Domain.ApiModels;
+using Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,5 +13,7 @@ namespace Domain.Service
         Task<object> GetStudent(string id, CancellationToken ct = new CancellationToken());
 
         Task<object> GetInstitution(string id, CancellationToken ct = new CancellationToken());
+
+        Task<AuthenticationResultApiModel> ValidateUser(LoginApiModel credentials, string secret, TimeSpan tokenLifeTime, CancellationToken ct = new CancellationToken());
     }
 }
